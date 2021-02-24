@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PracticaFinalM8UF1</string>
+    <string name="principal">Principal</string>
+    <string name="detail">Detalle</string>
+    <string name="numero">prueba1</string>
+    <string name="descripcion">prueba2</string>
+    <string name="marca">prueba3</string>
+</resources>
