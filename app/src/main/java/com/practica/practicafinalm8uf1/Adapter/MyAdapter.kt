@@ -1,6 +1,7 @@
 package com.practica.practicafinalm8uf1.Adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +19,7 @@ class MyAdapter(private val context: Context, private val modelList: MutableList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         var itemView = LayoutInflater.from(context).inflate(R.layout.layout_item, parent, false)
+        Log.i("prueba","test")
         return MyViewHolder(itemView)
     }
 

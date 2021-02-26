@@ -1,7 +1,10 @@
 package com.practica.practicafinalm8uf1
 
 import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.practica.practicafinalm8uf1.Adapter.MyAdapter
@@ -20,6 +23,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var adapter : MyAdapter
     lateinit var dialog: AlertDialog
 
+    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+        return super.onCreateView(name, context, attrs)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,15 +39,15 @@ class MainActivity : AppCompatActivity() {
 
         dialog = SpotsDialog.Builder().setCancelable(false).setContext(this).build()
 
-        getAllMovieList()
+        getAllList()
     }
 
-    private fun getAllMovieList() {
+    private fun getAllList() {
         dialog.show()
 
         mService.getModelList().enqueue(object : Callback<MutableList<Marca>> {
             override fun onFailure(call: Call<MutableList<Marca>>, t: Throwable) {
-                var aba = 1
+                var testNoUsado = 1
             }
 
             override fun onResponse(call: Call<MutableList<Marca>>, response: Response<MutableList<Marca>>) {

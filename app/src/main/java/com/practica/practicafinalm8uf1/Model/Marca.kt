@@ -1,6 +1,7 @@
 package com.practica.practicafinalm8uf1.Model
 
 class Marca {
+    //Se declaran los campos que hay en el JSON
     var numero_seminari: String? = null
     var titol: String? = null
     var descripcio: String? = null
